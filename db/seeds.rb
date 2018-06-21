@@ -132,5 +132,7 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+aa = User.create(name: "Michael Hartl", email: "mhartl@example.com", password: "foobar", password_confirmation: "foobar")
+bb = User.create(name: "Hartl Jjjj", email: "hartl@example.com", password: "foobar", password_confirmation: "foobar")
 
 puts "DONE!"

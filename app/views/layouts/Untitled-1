@@ -1,0 +1,20 @@
+
+<div class="wrapper">
+<form class="form-signin">       
+  <h2 class="form-signin-heading">Please login</h2>
+  <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+  <input type="password" class="form-control" name="signinpassword" placeholder="Password" required=""/>      
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+</form>
+</div>
+
+<div class="wrapper">
+<form class="form-signin">       
+  <h2 class="form-signin-heading">Sign up</h2>
+  <input type="text" class="form-control" name="firstname" placeholder="First Name" required="" autofocus="" />
+  <input type="text" class="form-control" name="lastname" placeholder="Last Name" required="" autofocus="" />
+  <input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus="" />
+  <input type="password" class="form-control" name="signuppassword" placeholder="Password" required=""/>      
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>   
+</form>
+</div>

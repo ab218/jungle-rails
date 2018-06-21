@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  root to: 'products#index'
+  get  '/signup',  to: 'users#new'
+  resources :users, only: [:index, :show, :create]
 
+  root to: 'products#index'
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
@@ -17,6 +19,8 @@ Rails.application.routes.draw do
     resources :products, except: [:edit, :update, :show]
     resources :categories, only: [:create, :new, :index]
   end
+
+
   
 
   # The priority is based upon order of creation: first created -> highest priority.
