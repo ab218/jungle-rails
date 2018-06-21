@@ -2,7 +2,11 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @line_items = @order.line_items.all()
+    @ordered = Product.find_by(id: @line_items)
+
   end
+  helper_method :order
 
   def create
     charge = perform_stripe_charge
@@ -66,5 +70,5 @@ class OrdersController < ApplicationController
     end
     total
   end
-
+  helper_method :cart_total
 end

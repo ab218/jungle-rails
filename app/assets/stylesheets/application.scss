@@ -11,10 +11,25 @@ body {
   padding-top: 70px;
 }
 
+.tinyImg {
+  max-height: 100px;
+  max-width: 100px;
+}
+
+.orderTotal {
+  position: absolute;
+  bottom: 0;
+  right: 5em;
+}
+
 .loggedInUser {
   position: relative;
   top: 7px;
   left: 30px;
+}
+
+.thanks {
+  margin-bottom: 10px
 }
 
 .signups {
