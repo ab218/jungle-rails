@@ -11,11 +11,4 @@ class User < ActiveRecord::Base
   def test_password(password, hash)
     BCrypt::Password.new(hash) == password
   end
-
-  # before_create :create_password
-  # private
-  # def create_password
-  #   self.password = (0...8).map { ('a'..'z').to_a[rand(26)] }.join
-  # end
-
 end

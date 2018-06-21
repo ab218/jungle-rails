@@ -134,5 +134,6 @@ cat3.products.create!({
 
 aa = User.create(name: "Michael Hartl", email: "mhartl@example.com", password: "foobar", password_confirmation: "foobar")
 bb = User.create(name: "Hartl Jjjj", email: "hartl@example.com", password: "foobar", password_confirmation: "foobar")
+cc = User.create(name: 'a', email: "a@a.com", password: 'a', password_confirmation: 'a')
 
 puts "DONE!"

@@ -1,5 +1,7 @@
 class Admin::CategoriesController < ApplicationController
 
+
+
     def index
       @categories = Category.order(id: :desc).all
     end
@@ -30,6 +32,13 @@ class Admin::CategoriesController < ApplicationController
       params.require(:category).permit(
         :name
       )
+    end
+
+    def check_admin
+      if current_user.admin == false
+        redirect '/'
+      end
+      # add before_action :check_admin to top of this page
     end
   
   end

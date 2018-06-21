@@ -7,14 +7,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= button_to 'Register', users_path, method: :get, class: 'btn btn-info btn-xs signups' %>
-      <%= button_to 'Sign In', users_path, method: :get, class: 'btn btn-info btn-xs signins' %>
       <a class="navbar-brand" href="/">Jungle</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
           <%= link_to 'Home', :root %>
+        </li>
+        <li>
+        <%= link_to 'Register', users_path %>
+        </li>
+        <li>
+          <% if logged_in? %>
+          <%= link_to "Log out", logout_path, method: :delete %>
+          <% else %>
+          <%= link_to 'Sign in', login_path %>
+          <% end %>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -45,6 +53,11 @@
           <%= link_to cart_path do %>
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
+        </li>
+        <li>
+        <% if logged_in? %>
+        <h5 class="loggedInUser"><%= @current_user.name %></h5>
+        <% end %>
         </li>
       </ul>
     </div>

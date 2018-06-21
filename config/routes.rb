@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   get  '/signup',  to: 'users#new'
   resources :users, only: [:index, :show, :create]
 
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
+
   root to: 'products#index'
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
