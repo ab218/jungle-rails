@@ -1,3 +1,14 @@
+<% if cart.length == 0 %>
+
+<h1>It looks like your cart is empty...</h1>
+
+<h1>:(</h1>
+<br>
+<br>
+<%= link_to "Go Back", root_path %>
+
+<% else %>
+
 <section class="cart-show">
 
   <header class="page-header">
@@ -51,3 +62,4 @@
   </div>
 
 </section>
+<% end %>
