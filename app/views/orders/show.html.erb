@@ -1,14 +1,13 @@
 <section class="orders-show">
 
   <header class="page-header">
-    <h1>Order #<%= @order.id %></h1>
+
   </header>
 <body>
   <div>
-  <h4>Thank you for your order, <%= @current_user.name %> !</h4>
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary thanks' %>
   </div>
-
+  <h4>Thank you for your order, <%= @order.email %> !</h4>
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -25,8 +24,7 @@
         <% end %>
       </tbody>
       </body>
-
-</section>
 <footer class="orderTotal">
 <h4>Grand Total: <%= humanized_money_with_symbol @order.total_cents %></h4>
       </footer>
+</section>
