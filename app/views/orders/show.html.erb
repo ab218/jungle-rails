@@ -25,6 +25,6 @@
       </tbody>
       </body>
 <footer class="orderTotal">
-<h4>Grand Total: <%= humanized_money_with_symbol @order.total_cents %></h4>
+<h4>Grand Total: <%= humanized_money_with_symbol @order.total_cents.to_f / 100 %></h4>
       </footer>
 </section>
