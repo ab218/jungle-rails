@@ -136,4 +136,8 @@ aa = User.create(name: "Michael Hartl", email: "mhartl@example.com", password: "
 bb = User.create(name: "Hartl Jjjj", email: "hartl@example.com", password: "foobar", password_confirmation: "foobar")
 cc = User.create(name: 'a', email: "a@a.com", password: 'a', password_confirmation: 'a')
 
+review1 = Review.create(product_id: 1, user_id: 1, description: "test desc1", rating: 2)
+review2 = Review.create(product_id: 1, user_id: 2, description: "test desc2", rating: 5)
+review3 = Review.create(product_id: 1, user_id: 1, description: "test desc3", rating: 3)
+
 puts "DONE!"

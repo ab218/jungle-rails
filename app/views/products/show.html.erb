@@ -26,6 +26,14 @@
       </div>
     </div>
 
+    <div>
+    <% @reviews.each do |review| %>
+      <h5>Username: <%= review.user.name %></h5>
+      <h5>Rating: <%= review.rating %> / 5</h5>
+      <h5>Review: <%= review.description %></h5>
+      <br>
+    <% end %>
+    </div>
   </article>
 
 </section>
