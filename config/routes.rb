@@ -7,6 +7,12 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
+
+resources :products do
+  resources :reviews, only: [:create]
+end
+
+
   root to: 'products#index'
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
