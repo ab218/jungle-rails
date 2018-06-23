@@ -27,6 +27,14 @@
     </div>
 
     <div>
+    <%= form_for [@product, @new_review] do |f| %>
+      <%= f.select :rating, ['1', '2', '3', '4', '5'] %>
+      <%= f.text_area :description, size: "60x12" %>
+      <%= f.submit "Create" %>
+    <% end %>
+    </div>
+
+<div>
     <% @reviews.each do |review| %>
       <h5>Username: <%= review.user.name %></h5>
       <h5>Rating: <%= review.rating %> / 5</h5>
