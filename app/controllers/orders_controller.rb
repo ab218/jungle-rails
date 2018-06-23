@@ -8,8 +8,6 @@ class OrdersController < ApplicationController
     @ordered = Product.find_by(id: @line_items)
   end
 
-
-
   def create
     charge = perform_stripe_charge
     order  = create_order(charge)
@@ -39,9 +37,17 @@ class OrdersController < ApplicationController
     Stripe::Charge.create(
       source:      params[:stripeToken],
       amount:      cart_total, # in cents
-      description: "#{current_user.name}'s Jungle Order",
+      description: guest_if_nil,
       currency:    'cad'
     )
+  end
+
+  def guest_if_nil
+    if current_user == nil
+      return "Guest's Jungle Order"
+    else
+      return "#{current_user.name}'s Jungle Order"
+    end
   end
 
   def create_order(stripe_charge)
