@@ -2,4 +2,17 @@
 Congratulations!
 ===============================================
  
-You have successfully purchased something.
+Thank you for the purchase.
+
+<% @order.line_items.each do |line_item| %>
+<% if product = Product.find_by(id: line_item.product_id) %>
+
+Name: <%= product.name %>
+Description: <%= product.description %>
+Cost per unit: <%= product.price %>
+Quantity: <%= line_item.quantity %>
+<% end %>
+<% end %>
+
+
+Grand Total: <%= humanized_money_with_symbol @order.total_cents.to_f / 100 %>

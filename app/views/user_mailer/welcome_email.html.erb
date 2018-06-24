@@ -10,21 +10,18 @@
         <% if product = Product.find_by(id: line_item.product_id) %>
 <tr>
     <td>
-      <h4><%= product.name %></h4>
+      <h4>Name: <%= product.name %></h4>
       <br>
-      <p><%= product.description %></p>
+      <p>Description: <%= product.description %></p>
       <td>
       <%= image_tag product.image.url, class: 'tinyImg' %>
     </td>
     </td>
     <td>
-    <%= product.price %>
+    Cost per unit: <%= product.price %>
   </td>
   <td>
-  <%= line_item.quantity %>
-</td>
-<td>
-<%= line_item.quantity * product.price %>
+  Quantity: <%= line_item.quantity %>
 </td>
   </tr>
       <% end %>

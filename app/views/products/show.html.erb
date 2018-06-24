@@ -38,13 +38,13 @@
 
 <div>
     <% @reviews.each do |review| %>
-      <% if current_user == review.user %>
-      <% end %>
+      <h3><%= review.user.name %> </h3>
       <h5>Rating: <%= review.rating %> / 5</h5>
-      <span>Review: </span><span><%= review.description %></span>
-      <h5>Submitted by <%= review.user.name %> </h5>
-      <h5>at <%= review.created_at %></h5>
-      <%= link_to "Remove", product_review_path(product_id: @product.id, id: review.id), :method => :delete, :data => {:confirm => "You Sure?"} %>
+      <span><%= review.description %></span>
+      <h5>on <%= review.created_at %></h5>
+      <% if current_user == review.user %>
+      <%= link_to product_review_path(product_id: @product.id, id: review.id), :method => :delete, :data => {:confirm => "You Sure?"} do %><i class="fa fa-trash"></i> Delete<% end %>
+      <% end %>
       <br>
       <br>
     <% end %>
