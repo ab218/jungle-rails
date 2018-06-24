@@ -23,22 +23,25 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
-      </div>
+
     </div>
 
-    <div>
+    <div class="col-sm-4 reviews-form">
     <% if logged_in? %>
     <%= form_for [@product, @new_review] do |f| %>
-      <%= f.select :rating, ['1', '2', '3', '4', '5'] %>
-      <%= f.text_area :description, size: "30x12" %>
+      <%= f.label :rating %>
+      <%= f.select :rating, ['5', '4', '3', '2', '1'] %>
+      <%= f.text_area :description, class: 'rating-text' %>
       <%= f.submit "Create" %>
     <% end %>
     <% end %>
     </div>
+    </div>
 
-<div>
+<div class="col-sm-8 centered">
     <% @reviews.each do |review| %>
-      <h3><%= review.user.name %> </h3>
+      <div class="reviews">
+      <h3><%= review.user.first_name %> </h3>
       <h5>Rating: <%= review.rating %> / 5</h5>
       <span><%= review.description %></span>
       <h5>on <%= review.created_at %></h5>

@@ -132,12 +132,13 @@ cat3.products.create!({
   price: 2_483.75
 })
 
-aa = User.create(name: "Michael Hartl", email: "mhartl@example.com", password: "foobar", password_confirmation: "foobar")
-bb = User.create(name: "Hartl Jjjj", email: "hartl@example.com", password: "foobar", password_confirmation: "foobar")
-cc = User.create(name: 'a', email: "a@a.com", password: 'a', password_confirmation: 'a')
-
 review1 = Review.create(product_id: 1, user_id: 1, description: "test desc1", rating: 2)
 review2 = Review.create(product_id: 1, user_id: 2, description: "test desc2", rating: 5)
 review3 = Review.create(product_id: 1, user_id: 1, description: "test desc3", rating: 3)
+
+
+aa = User.create(first_name: "Michael", last_name: "Bolton", email: "mhartl@example.com", password: "foobar", password_confirmation: "foobar")
+bb = User.create(first_name: "A", last_name: "B", email: "hartl@example.com", password: "foobar", password_confirmation: "foobar")
+cc = User.create(first_name: "B", last_name: "C", email: "a@a.com", password: 'a', password_confirmation: 'a')
 
 puts "DONE!"

@@ -90,12 +90,35 @@ body {
 	}
 }
 
+.reviews {
+  position: relative;
+  overflow-wrap: break-word;
+}
+
 /* forms */
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
+  position: relative;
   width: 100%;
-  margin-bottom: 15px;
+  resize: none;
+  margin-bottom: 1em;
+}
+
+.reviews-form {
+  margin: 1em 10em;
+}
+
+.reviews-form label {
+  margin: 0.5em;
+}
+
+textarea {
+  height: 10em;
+}
+
+select {
+  width: 25%;
 }
 
 input {

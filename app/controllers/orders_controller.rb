@@ -46,7 +46,7 @@ class OrdersController < ApplicationController
     if current_user == nil
       return "Guest's Jungle Order"
     else
-      return "#{current_user.name}'s Jungle Order"
+      return "#{current_user.first_name}'s Jungle Order"
     end
   end
 
