@@ -82,4 +82,4 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: <%= ENV['https://data.heroku.com/datastores/6a013299-f90a-4818-96ea-98a2ecc051ee'] %>
