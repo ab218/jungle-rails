@@ -17,7 +17,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
       )
       end
 
-      scenario "They see all products" do
+      scenario "They see product description" do
         # ACT
         visit root_path
         first('article.product').find_link('Details').click
