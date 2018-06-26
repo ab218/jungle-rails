@@ -64,6 +64,8 @@ group :development do
   gem 'spring'
 end
 
+gem 'aws-sdk', '~> 2'
+
 group :production do
   gem 'newrelic_rpm'
   gem 'rails_12factor'
