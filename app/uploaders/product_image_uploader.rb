@@ -1,4 +1,5 @@
 # encoding: utf-8
+require 'fog'
 
 class ProductImageUploader < CarrierWave::Uploader::Base
 
@@ -6,8 +7,10 @@ class ProductImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
 
+
+  #### FIND ME AND CHANGE ME FOR HEROKU ####
   # Choose what kind of storage to use for this uploader:
-  storage :fog
+  storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
