@@ -3,6 +3,9 @@
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
 
+##Heroku
+https://peaceful-wave-44116.herokuapp.com/
+
 ##Screenshots
 
 ![Alt text](https://github.com/ab218/jungle-rails/blob/master/Screen%20Shot%202018-06-23%20at%2010.43.44%20PM.png)
