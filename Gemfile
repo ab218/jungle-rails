@@ -45,6 +45,13 @@ group :development, :test do
   # ...
 end
 
+group :test do
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver', '~> 2.53.4'
+end
+
 group :development, :test do
   gem 'shoulda-matchers', '~> 3.1'
 end
@@ -59,7 +66,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'pry'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
@@ -71,8 +78,3 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :test do
-  gem 'capybara'
-  gem 'poltergeist'
-  gem 'database_cleaner'
-end
